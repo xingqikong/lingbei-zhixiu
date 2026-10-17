@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="亲手一试 —— 穿针、配色、绣制，体验一针一线的非遗织绣。">
+  <title>亲手一试 · 锦绣长卷</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__brand" href="index.html">锦绣长卷</a>
+    <nav class="nav__links">
+      <a href="index.html">回到长卷</a>
+      <a href="about.html">关于</a>
+    </nav>
+  </header>
+
+  <main class="workshop">
+    <p class="chapter__lead">亲手一试 · 非遗织绣</p>
+    <h1>一针一线，皆可亲为</h1>
+    <p class="chapter__body">来，亲手绣一朵樱花吧：穿针、配色、绣制，最后玩一局纹样小游戏。支持鼠标与触屏。</p>
+
+    <div class="steps">
+      <button class="step-tab is-active" data-step="1">① 穿针</button>
+      <button class="step-tab" data-step="2">② 配色</button>
+      <button class="step-tab" data-step="3">③ 绣制</button>
+      <button class="step-tab" data-step="4">④ 玩一局</button>
+    </div>
+
+    <div class="stage" data-stage="1">
+      <p class="stage__hint">拖动丝线的线头，穿过针眼。</p>
+      <div class="needle-stage" id="needleStage">
+        <svg class="needle-svg" viewBox="0 0 440 300" aria-label="穿针互动">
+          <line id="needleTrack" x1="60" y1="250" x2="400" y2="250" stroke="rgba(42,37,32,0.12)" stroke-width="1.5"></line>
+          <path id="threadPath" d="M60 250 Q 150 210 210 180" fill="none" stroke="#C8402F" stroke-width="3" stroke-linecap="round"></path>
+          <circle id="threadTip" cx="210" cy="180" r="11" fill="#C8402F" stroke="#fff" stroke-width="3"></circle>
+          <!-- 针：针眼在上，针尖朝下 -->
+          <g id="needle" transform="translate(360 0)">
+            <circle id="needleEye" cx="0" cy="78" r="9" fill="none" stroke="#2A2520" stroke-width="3"></circle>
+            <line x1="0" y1="88" x2="0" y2="150" stroke="#2A2520" stroke-width="3.5" stroke-linecap="round"></line>
+          </g>
+          <text id="needleMsg" x="220" y="285" text-anchor="middle" fill="#6B6257" font-size="15">把线头拖进针眼</text>
+        </svg>
+      </div>
+      <div class="stage__next"><button id="next1" disabled>穿好了，下一步</button></div>
+    </div>
+
+    <div class="stage" data-stage="2" hidden>
+      <p class="stage__hint">先选一根丝线，再点花瓣上色。</p>
+      <div class="palette" id="palette"></div>
+      <div class="motif" style="text-align:center">
+        <svg viewBox="0 0 220 220" id="motifSvg" aria-label="配色互动">
+          <g stroke="#6B6257" stroke-width="1.5">
+            <g transform="rotate(0 110 170)"><path class="petal" d="M110 188 C 90 166 84 126 94 80 C 102 92 118 92 126 80 C 136 126 130 166 110 188 Z"></path></g>
+            <g transform="rotate(72 110 170)"><path class="petal" d="M110 188 C 90 166 84 126 94 80 C 102 92 118 92 126 80 C 136 126 130 166 110 188 Z"></path></g>
+            <g transform="rotate(144 110 170)"><path class="petal" d="M110 188 C 90 166 84 126 94 80 C 102 92 118 92 126 80 C 136 126 130 166 110 188 Z"></path></g>
+            <g transform="rotate(216 110 170)"><path class="petal" d="M110 188 C 90 166 84 126 94 80 C 102 92 118 92 126 80 C 136 126 130 166 110 188 Z"></path></g>
+            <g transform="rotate(288 110 170)"><path class="petal" d="M110 188 C 90 166 84 126 94 80 C 102 92 118 92 126 80 C 136 126 130 166 110 188 Z"></path></g>
+          </g>
+        </svg>
+      </div>
+      <p class="thread-note" id="colorNote" style="text-align:center">选中颜色后，点击花瓣上色。</p>
+      <div class="stage__next"><button id="next2" disabled>配色完成，下一步</button></div>
+    </div>
+
+    <div class="stage" data-stage="3" hidden>
+      <p class="stage__hint">移动鼠标或手指，沿虚点绣出一朵樱花。</p>
+      <div class="palette" id="stitchPalette"></div>
+      <canvas class="stitch-canvas" id="stitchCanvas" aria-label="绣制互动"></canvas>
+      <p class="thread-note" id="stitchProgress" style="text-align:center">0 / 0 针</p>
+      <div class="stage__next"><button id="reset3">重绣一遍</button></div>
+    </div>
+
+    <div class="stage" data-stage="4" hidden>
+      <p class="stage__hint">放松一下：翻开卡片，把相同的纹样配成对。</p>
+      <div class="memory-board" id="memoryBoard"></div>
+      <div id="memoryReward" style="text-align:center"></div>
+      <p class="thread-note" id="memoryNote" style="text-align:center">已翻开 0 次</p>
+      <div class="stage__next"><button id="memoryRestart">再玩一局</button></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>锦绣长卷 · 织绣主题数字长卷</span>
+    <span>武汉大学 · 匠心传承，非遗焕新</span>
+    <span><a href="index.html">回到长卷</a> · <a href="about.html">关于</a></span>
+  </footer>
+
+  <script src="assets/js/interactive.js" defer></script>
+</body>
+</html>

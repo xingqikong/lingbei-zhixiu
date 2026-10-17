@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="锦绣长卷 —— 一针一线，绣出千年。织绣主题数字长卷。">
+  <title>锦绣长卷 · 一针一线绣千年</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__brand" href="#opening">锦绣长卷</a>
+    <nav class="nav__links">
+      <a href="#needlework">针法</a>
+      <a href="#colors">丝线</a>
+      <a href="#motifs">纹样</a>
+      <a href="#whu">珞珈</a>
+      <a href="#story">匠心</a>
+      <a href="interactive.html">亲手一试</a>
+      <a href="about.html">关于</a>
+    </nav>
+  </header>
+
+  <div class="stitch" aria-hidden="true">
+    <svg viewBox="0 0 26 100" preserveAspectRatio="none">
+      <line class="stitch__track" x1="13" y1="0" x2="13" y2="100" vector-effect="non-scaling-stroke"></line>
+      <line class="stitch__thread" id="stitchThread" x1="13" y1="0" x2="13" y2="100" pathLength="1" vector-effect="non-scaling-stroke"></line>
+      <g class="stitch__needle" id="stitchNeedle" transform="translate(13 0)">
+        <circle cx="0" cy="-12" r="3.2" fill="none" stroke="#9a927f" stroke-width="1.4"></circle>
+        <line x1="0" y1="-8" x2="0" y2="14" stroke="#9a927f" stroke-width="1.8" stroke-linecap="round"></line>
+        <path d="M0 -12 C 5 -18 7 -26 4 -32" fill="none" stroke="#9a927f" stroke-width="1.2" opacity="0.7"></path>
+      </g>
+    </svg>
+  </div>
+
+  <main>
+    <!-- 开篇 -->
+    <section id="opening" class="chapter hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="sakura" aria-hidden="true">
+        <span class="sakura-petal" style="left:8%; --dx:10vw; --dur:11s; --delay:0s"></span>
+        <span class="sakura-petal" style="left:22%; --dx:-7vw; --dur:13s; --delay:2.4s"></span>
+        <span class="sakura-petal" style="left:36%; --dx:8vw; --dur:12s; --delay:0.8s"></span>
+        <span class="sakura-petal" style="left:50%; --dx:9vw; --dur:10s; --delay:1.1s"></span>
+        <span class="sakura-petal" style="left:64%; --dx:-10vw; --dur:14s; --delay:3.2s"></span>
+        <span class="sakura-petal" style="left:78%; --dx:6vw; --dur:12s; --delay:0.6s"></span>
+        <span class="sakura-petal" style="left:88%; --dx:-8vw; --dur:15s; --delay:2s"></span>
+      </div>
+      <div class="hero__inner">
+        <div>
+          <p class="chapter__lead">开篇 · 一针千年</p>
+          <h1 class="hero__title">一针一线<br><em>绣出千年</em></h1>
+          <p class="hero__sub">锦 绣 长 卷 · 非 遗 织 绣</p>
+          <span class="hero__seal">锦绣长卷</span>
+          <p class="chapter__body">上古先民采桑养蚕，抽丝成线；一条丝路自东方向西，把柔软与繁华织进历史。从章服上的十二章纹，到闺阁中的花鸟鱼虫，再到今日的非遗名录——织绣，是中国人指尖延续了三千年的语言。向下滑动，让一根丝线带你穿过这卷锦绣。</p>
+          <span class="hero__scroll">向下滑动，展开长卷</span>
+        </div>
+        <div class="hoop" aria-hidden="true">
+          <div class="hoop__ring"></div>
+          <div class="hoop__cloth">
+            <svg viewBox="0 0 200 200">
+              <g class="hoop__stitch" fill="none" stroke-linecap="round">
+                <g transform="rotate(0 100 100)"><path d="M100 128 C 80 112 72 82 84 32 C 92 44 108 44 116 32 C 128 82 120 112 100 128 Z"></path></g>
+                <g transform="rotate(72 100 100)"><path d="M100 128 C 80 112 72 82 84 32 C 92 44 108 44 116 32 C 128 82 120 112 100 128 Z"></path></g>
+                <g transform="rotate(144 100 100)"><path d="M100 128 C 80 112 72 82 84 32 C 92 44 108 44 116 32 C 128 82 120 112 100 128 Z"></path></g>
+                <g transform="rotate(216 100 100)"><path d="M100 128 C 80 112 72 82 84 32 C 92 44 108 44 116 32 C 128 82 120 112 100 128 Z"></path></g>
+                <g transform="rotate(288 100 100)"><path d="M100 128 C 80 112 72 82 84 32 C 92 44 108 44 116 32 C 128 82 120 112 100 128 Z"></path></g>
+                <path d="M100 100 L94 80 M100 100 L112 88 M100 100 L90 94"></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="stat__num">三千年</div><div class="stat__label">丝线织就的时光</div></div>
+          <div class="stat"><div class="stat__num">四大名绣</div><div class="stat__label">苏 · 湘 · 蜀 · 粤</div></div>
+          <div class="stat"><div class="stat__num">百余种</div><div class="stat__label">世代相传的针法</div></div>
+          <div class="stat"><div class="stat__num">千万针</div><div class="stat__label">一件精品的沉淀</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 千年针法 -->
+    <section id="needlework" class="chapter reveal">
+      <p class="chapter__lead">千年针法</p>
+      <h2 class="chapter__title">四大名绣，各美其美</h2>
+      <p class="chapter__body">同样的丝线，不同的针法与性情。苏绣雅洁，湘绣浓烈，蜀绣灵秀，粤绣华丽——四地绣工以针为笔，把各自的一方水土绣进绢帛。</p>
+      <figure class="wide-fig">
+        <img src="assets/img/cansang.jpg" alt="蚕桑起源 · 丝之始" loading="lazy">
+        <figcaption class="fig-cap">蚕桑 · 丝之始</figcaption>
+      </figure>
+      <div class="schools">
+        <article class="school">
+          <img class="school__img" src="assets/img/suxiu.jpg" alt="苏绣 · 双面绣金鱼" loading="lazy">
+          <h3 class="school__name">苏绣</h3>
+          <p class="school__region">江苏 · 苏州</p>
+          <p class="school__trait">精细雅洁 · 以针作画</p>
+          <p class="school__desc">针脚细密，丝理圆转，善作双面绣。齐针、套针、施针皆精，一针一线仿画之神韵，被誉为“以针作画，巧夺天工”。</p>
+          <div class="school__tags"><span class="school__tag">双面绣</span><span class="school__tag">小猫 · 金鱼</span><span class="school__tag">齐针 · 套针</span></div>
+        </article>
+        <article class="school">
+          <img class="school__img" src="assets/img/xiangxiu.jpg" alt="湘绣 · 鬅毛针狮虎" loading="lazy">
+          <h3 class="school__name">湘绣</h3>
+          <p class="school__region">湖南 · 长沙</p>
+          <p class="school__trait">色彩浓烈 · 鬅毛针</p>
+          <p class="school__desc">以鬅毛针见长，擅绣狮虎走兽，毛色蓬松立体；用色大胆浓烈，极具湖湘的爽朗性情。</p>
+          <div class="school__tags"><span class="school__tag">狮虎走兽</span><span class="school__tag">鬅毛针</span><span class="school__tag">色彩浓烈</span></div>
+        </article>
+        <article class="school">
+          <img class="school__img" src="assets/img/shuxiu.jpg" alt="蜀绣 · 鲤鱼芙蓉" loading="lazy">
+          <h3 class="school__name">蜀绣</h3>
+          <p class="school__region">四川 · 成都</p>
+          <p class="school__trait">针法丰富 · 灵秀清雅</p>
+          <p class="school__desc">一百余种针法各擅其长，鲤鱼、芙蓉、锦纹尤佳；构图清丽、色调柔和，带着蜀地的灵秀。</p>
+          <div class="school__tags"><span class="school__tag">鲤鱼 · 芙蓉</span><span class="school__tag">锦纹</span><span class="school__tag">针法百余</span></div>
+        </article>
+        <article class="school">
+          <img class="school__img" src="assets/img/yuexiu.jpg" alt="粤绣 · 金银线龙凤" loading="lazy">
+          <h3 class="school__name">粤绣</h3>
+          <p class="school__region">广东 · 广州</p>
+          <p class="school__trait">繁复华丽 · 金银垫绣</p>
+          <p class="school__desc">以金银线与垫绣见长，龙凤、百鸟、岭南风物皆可入绣；构图饱满、富丽堂皇，一派南国气象。</p>
+          <div class="school__tags"><span class="school__tag">金银线绣</span><span class="school__tag">龙凤 · 百鸟</span><span class="school__tag">垫绣</span></div>
+        </article>
+      </div>
+
+      <h3 class="subhead">常见针法</h3>
+      <div class="stitches">
+        <div class="stitch-card">
+          <div class="stitch-card__demo"><svg viewBox="0 0 300 18" preserveAspectRatio="none"><line x1="0" y1="9" x2="300" y2="9" stroke="#D9A441" stroke-width="3"/></svg></div>
+          <div class="stitch-card__name">齐针</div>
+          <p class="stitch-card__desc">起落针整齐排列，绣面平整光洁，是入门的第一课，也是最见功力的基本功。</p>
+        </div>
+        <div class="stitch-card">
+          <div class="stitch-card__demo"><svg viewBox="0 0 300 18" preserveAspectRatio="none"><line x1="0" y1="9" x2="300" y2="9" stroke="#D9A441" stroke-width="3" stroke-dasharray="14 5"/></svg></div>
+          <div class="stitch-card__name">套针</div>
+          <p class="stitch-card__desc">分批分层相套，由深到浅自然过渡，最善写花瓣的层次与远山的晕染。</p>
+        </div>
+        <div class="stitch-card">
+          <div class="stitch-card__demo"><svg viewBox="0 0 300 18" preserveAspectRatio="none"><line x1="0" y1="9" x2="300" y2="9" stroke="#D9A441" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.1 11"/></svg></div>
+          <div class="stitch-card__name">滚针</div>
+          <p class="stitch-card__desc">后针起于前针之中，线条圆转如珠，勾勒轮廓与叶脉时最是流畅。</p>
+        </div>
+        <div class="stitch-card">
+          <div class="stitch-card__demo"><svg viewBox="0 0 300 18" preserveAspectRatio="none"><line x1="0" y1="9" x2="300" y2="9" stroke="#D9A441" stroke-width="3" stroke-dasharray="4 8"/></svg></div>
+          <div class="stitch-card__name">切针</div>
+          <p class="stitch-card__desc">针针相切、短促有力，勾画细密边线，工整利落，如刀刻一般。</p>
+        </div>
+        <div class="stitch-card">
+          <div class="stitch-card__demo"><svg viewBox="0 0 300 18" preserveAspectRatio="none"><line x1="0" y1="9" x2="300" y2="9" stroke="#D9A441" stroke-width="3" stroke-dasharray="22 3"/></svg></div>
+          <div class="stitch-card__name">接针</div>
+          <p class="stitch-card__desc">首尾相接、藏起藏落，长线条一气呵成，适合衣纹与流水。</p>
+        </div>
+        <div class="stitch-card">
+          <div class="stitch-card__demo"><svg viewBox="0 0 300 18" preserveAspectRatio="none"><line x1="0" y1="9" x2="300" y2="9" stroke="#D9A441" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 7"/></svg></div>
+          <div class="stitch-card__name">旋针</div>
+          <p class="stitch-card__desc">针脚回旋交错，表现毛发、水波与花瓣的转折，灵活而生动。</p>
+        </div>
+      </div>
+
+      <h3 class="subhead">织绣简史</h3>
+      <figure class="wide-fig">
+        <img src="assets/img/sichou.jpg" alt="丝路驼队" loading="lazy">
+        <figcaption class="fig-cap">丝路驼铃 · 绣品远播</figcaption>
+      </figure>
+      <div class="timeline">
+        <div class="timeline__item"><div class="timeline__era">商周</div><p class="timeline__text">章服有制，刺绣初见于礼服之上，以彰身份等级。</p></div>
+        <div class="timeline__item"><div class="timeline__era">汉唐</div><p class="timeline__text">丝路驼铃，绣品随商队远播西域，成为东西方共同的向往。</p></div>
+        <div class="timeline__item"><div class="timeline__era">宋代</div><p class="timeline__text">画绣并兴，绣工以针代笔，山水花鸟皆可入绣，气韵生动。</p></div>
+        <div class="timeline__item"><div class="timeline__era">明清</div><p class="timeline__text">四大名绣蔚然成风，针法趋于精微，题材日益繁盛。</p></div>
+        <div class="timeline__item"><div class="timeline__era">当代</div><p class="timeline__text">织绣列入非物质文化遗产，古老针线在新时代焕发新生。</p></div>
+      </div>
+    </section>
+
+    <!-- 丝线之色 -->
+    <section id="colors" class="chapter reveal">
+      <p class="chapter__lead">丝线之色</p>
+      <h2 class="chapter__title">五色观里的东方色谱</h2>
+      <p class="chapter__body">朱砂、石青、藤黄、松花绿、月白……古人以矿物与草木取色，一根丝线便是一抹山河。点一点下面的丝线，这卷长卷会随你的选择而染色。</p>
+      <div class="threads" id="threadList">
+        <button class="thread-swatch" data-hex="#C8402F" data-note="宫墙与嫁衣的红，热烈而庄重">
+          <span class="thread-swatch__spool" style="background:#C8402F"></span>
+          <span class="thread-swatch__name">朱砂</span>
+        </button>
+        <button class="thread-swatch" data-hex="#2E6A8E" data-note="青绿山水的底色，沉稳辽远">
+          <span class="thread-swatch__spool" style="background:#2E6A8E"></span>
+          <span class="thread-swatch__name">石青</span>
+        </button>
+        <button class="thread-swatch" data-hex="#3F5F8A" data-note="远山如黛，静谧深沉">
+          <span class="thread-swatch__spool" style="background:#3F5F8A"></span>
+          <span class="thread-swatch__name">青黛</span>
+        </button>
+        <button class="thread-swatch" data-hex="#E0A53B" data-note="明亮如秋，取自藤汁的暖黄">
+          <span class="thread-swatch__spool" style="background:#E0A53B"></span>
+          <span class="thread-swatch__name">藤黄</span>
+        </button>
+        <button class="thread-swatch" data-hex="#5E8C6A" data-note="江南草木的生机，清润宜人">
+          <span class="thread-swatch__spool" style="background:#5E8C6A"></span>
+          <span class="thread-swatch__name">松花绿</span>
+        </button>
+        <button class="thread-swatch" data-hex="#B9CBD8" data-note="月光下的留白，素净清雅">
+          <span class="thread-swatch__spool" style="background:#B9CBD8"></span>
+          <span class="thread-swatch__name">月白</span>
+        </button>
+        <button class="thread-swatch" data-hex="#C9A227" data-note="点睛之笔，华贵而不喧宾">
+          <span class="thread-swatch__spool" style="background:#C9A227"></span>
+          <span class="thread-swatch__name">鎏金</span>
+        </button>
+        <button class="thread-swatch" data-hex="#E8A0B2" data-note="珞珈春樱，温柔而明丽">
+          <span class="thread-swatch__spool" style="background:#E8A0B2"></span>
+          <span class="thread-swatch__name">樱粉</span>
+        </button>
+      </div>
+      <p class="thread-note" id="threadNote">选一根你喜欢的丝线，看看会发生什么。</p>
+
+      <div class="note-box">中国传统以“青、赤、黄、白、黑”为正色，间色由正色相调而得。织绣配色讲究“艳而不俗、雅而有骨”——浓烈处如朝霞，淡雅处似烟水。</div>
+
+      <h3 class="subhead">天然染材</h3>
+      <div class="dyes">
+        <div class="dye"><div class="dye__chip" style="background:#B23A2F"></div><div class="dye__name">茜草</div><div class="dye__color">染红</div></div>
+        <div class="dye"><div class="dye__chip" style="background:#2E5E8C"></div><div class="dye__name">靛蓝</div><div class="dye__color">染青</div></div>
+        <div class="dye"><div class="dye__chip" style="background:#E0A53B"></div><div class="dye__name">栀子</div><div class="dye__color">染黄</div></div>
+        <div class="dye"><div class="dye__chip" style="background:#6B4A8C"></div><div class="dye__name">紫草</div><div class="dye__color">染紫</div></div>
+        <div class="dye"><div class="dye__chip" style="background:#3A302B"></div><div class="dye__name">五倍子</div><div class="dye__color">染玄</div></div>
+        <div class="dye"><div class="dye__chip" style="background:#8C2F2F"></div><div class="dye__name">苏木</div><div class="dye__color">染绛</div></div>
+      </div>
+
+      <div class="note-box">以金箔缠丝成线，盘绕铺陈于锦面，谓之“盘金”“平金”。金银线绣华贵非常，多用于礼服、神佛绣像与节庆盛装。</div>
+    </section>
+
+    <!-- 纹样寓意 -->
+    <section id="motifs" class="chapter reveal">
+      <p class="chapter__lead">纹样寓意</p>
+      <h2 class="chapter__title">一纹一祥，皆有讲究</h2>
+      <p class="chapter__body">织绣纹样从不只为好看——每一朵花、每一只鸟，都藏着先民对福寿安康、富贵吉祥的祝愿。</p>
+      <div class="motifs">
+        <div class="motif-card"><div class="motif-card__glyph">牡丹</div><div class="motif-card__name">牡丹</div><div class="motif-card__meaning">花中之王，富贵荣华</div></div>
+        <div class="motif-card"><div class="motif-card__glyph">莲</div><div class="motif-card__name">莲花</div><div class="motif-card__meaning">出淤泥不染，清廉高洁</div></div>
+        <div class="motif-card"><div class="motif-card__glyph">蝠</div><div class="motif-card__name">蝙蝠</div><div class="motif-card__meaning">“蝠”谐“福”，福气临门</div></div>
+        <div class="motif-card"><div class="motif-card__glyph">如意</div><div class="motif-card__name">如意</div><div class="motif-card__meaning">称心顺意，万事如意</div></div>
+        <div class="motif-card"><div class="motif-card__glyph">缠枝</div><div class="motif-card__name">缠枝莲</div><div class="motif-card__meaning">枝蔓连绵，生生不息</div></div>
+        <div class="motif-card"><div class="motif-card__glyph">江崖</div><div class="motif-card__name">海水江崖</div><div class="motif-card__meaning">山河永固，万代江山</div></div>
+        <div class="motif-card"><div class="motif-card__glyph">樱</div><div class="motif-card__name">樱花</div><div class="motif-card__meaning">珞珈春色，青春与新生</div></div>
+      </div>
+    </section>
+
+    <!-- 珞珈的针脚 -->
+    <section id="whu" class="chapter reveal">
+      <p class="chapter__lead">珞珈的针脚</p>
+      <h2 class="chapter__title">把一座山绣进长卷</h2>
+      <p class="chapter__body">武汉大学的前身，是 1893 年的自强学堂；从珞珈山到樱花大道，“自强、弘毅、求是、拓新”的校训代代相传。我们把这座学府的记忆，也绣进这卷锦绣。</p>
+      <figure class="wide-fig">
+        <img src="assets/img/laozhaishe.jpg" alt="老斋舍 · 樱花城堡" loading="lazy">
+        <figcaption class="fig-cap">老斋舍 · 樱花城堡</figcaption>
+      </figure>
+      <h3 class="subhead">珞珈百年</h3>
+      <div class="timeline">
+        <div class="timeline__item"><div class="timeline__era">1893</div><p class="timeline__text">自强学堂创立，“自强”二字自此扎根。</p></div>
+        <div class="timeline__item"><div class="timeline__era">1928</div><p class="timeline__text">定名国立武汉大学，珞珈山下始建校园。</p></div>
+        <div class="timeline__item"><div class="timeline__era">2000</div><p class="timeline__text">四校合并，新的武汉大学扬帆起航。</p></div>
+        <div class="timeline__item"><div class="timeline__era">今天</div><p class="timeline__text">樱花年复一年，校训与匠心在一针一线里延续。</p></div>
+      </div>
+      <h3 class="subhead">校训 · 绣入四字</h3>
+      <div class="motifs">
+        <div class="motif-card"><div class="motif-card__glyph">自强</div><div class="motif-card__name">自强</div><div class="motif-card__meaning">奋发图强，自立不息</div></div>
+        <div class="motif-card"><div class="motif-card__glyph">弘毅</div><div class="motif-card__name">弘毅</div><div class="motif-card__meaning">抱负远大，意志坚定</div></div>
+        <div class="motif-card"><div class="motif-card__glyph">求是</div><div class="motif-card__name">求是</div><div class="motif-card__meaning">崇尚科学，探求真知</div></div>
+        <div class="motif-card"><div class="motif-card__glyph">拓新</div><div class="motif-card__name">拓新</div><div class="motif-card__meaning">开拓进取，守正创新</div></div>
+      </div>
+    </section>
+
+    <!-- 匠心故事 -->
+    <section id="story" class="chapter reveal">
+      <p class="chapter__lead">匠心故事</p>
+      <h2 class="chapter__title">三代人，一方绣绷</h2>
+      <p class="chapter__body">技艺的传承，从来不是一次交接，而是日复一日的俯身与专注。</p>
+      <div class="story-wrap">
+        <img class="story-img" src="assets/img/xiuniang.jpg" alt="绣娘伏案" loading="lazy">
+        <div class="story">
+          <div class="story__item">
+            <p class="story__chapter">阿婆 · 灯下</p>
+            <h3 class="story__year">五十年前</h3>
+            <p class="story__text">阿婆在江南老宅的窗下架起绣绷，煤油灯把丝线照得发亮。一根线要劈成三十二分之一，一瓣牡丹要绣上七天——她绣的第一朵牡丹，是给女儿嫁衣上的。</p>
+          </div>
+          <div class="story__item">
+            <p class="story__chapter">母亲 · 坚守</p>
+            <h3 class="story__year">三十年前</h3>
+            <p class="story__text">女儿接过针，把花鸟鱼虫绣进锦缎。机器绣品涌入市场，她却仍守着双面绣——两面皆是正面，断不得一根线头外露。一守，就是半生。</p>
+          </div>
+          <div class="story__item">
+            <p class="story__chapter">孙女 · 新生</p>
+            <h3 class="story__year">今天</h3>
+            <p class="story__text">孙女在珞珈山下的校园里，把老纹样做成新屏保、新纹样。针法未变，只是换了一片天地——她在直播间里绣给年轻人看，三千人在屏幕前，看一根针如何穿行。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 薪火相传 -->
+    <section id="legacy" class="chapter legacy reveal">
+      <p class="chapter__lead">薪火相传</p>
+      <h2 class="chapter__title">让传统在指尖重生</h2>
+      <p class="chapter__body">非遗不是橱窗里的旧物，而是可以被今天的手重新触摸的技艺。愿你亲手一试，把古老针法绣进属于这个时代的画面。</p>
+      <div class="note-box" style="text-align:left">苏绣、湘绣、蜀绣、粤绣等相继列入国家级非物质文化遗产代表性项目；各级代表性传承人制度，让技艺后继有人。从高级定制到国潮文创，从博物馆到短视频，古老的针线正以新的方式被看见。</div>
+      <figure class="closing-img">
+        <img src="assets/img/xinhua.jpg" alt="樱花绣卷" loading="lazy">
+        <figcaption class="fig-cap">一针一线 · 薪火相传</figcaption>
+      </figure>
+      <a class="cta" href="interactive.html">亲 手 一 试</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>锦绣长卷 · 织绣主题数字长卷</span>
+    <span>武汉大学 · 匠心传承，非遗焕新</span>
+    <span><a href="about.html">关于</a> · <a href="interactive.html">亲手一试</a></span>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
